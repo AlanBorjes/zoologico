@@ -15,8 +15,6 @@ public class Zoologico {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    private String ciudad;
-    private String pais;
     private String tamano;
     private String presupuesto;
     @ManyToOne
@@ -31,20 +29,18 @@ public class Zoologico {
     public Zoologico() {
     }
 
-    public Zoologico(long id, String name, String ciudad, String pais, String tamano, String presupuesto, @NonNull Ciudad ciudadId) {
+    public Zoologico(long id, String name,  String tamano, String presupuesto, @NonNull Ciudad ciudadId) {
         this.id = id;
         this.name = name;
-        this.ciudad = ciudad;
-        this.pais = pais;
+
         this.tamano = tamano;
         this.presupuesto = presupuesto;
         this.ciudadId = ciudadId;
     }
 
-    public Zoologico(String name, String ciudad, String pais, String tamano, String presupuesto, @NonNull Ciudad ciudadId) {
+    public Zoologico(String name, String tamano, String presupuesto, @NonNull Ciudad ciudadId) {
         this.name = name;
-        this.ciudad = ciudad;
-        this.pais = pais;
+
         this.tamano = tamano;
         this.presupuesto = presupuesto;
         this.ciudadId = ciudadId;
@@ -64,22 +60,6 @@ public class Zoologico {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getCiudad() {
-        return ciudad;
-    }
-
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
     }
 
     public String getTamano() {

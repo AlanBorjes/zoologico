@@ -28,12 +28,12 @@ public class ZoologicoController {
 
     @PostMapping("/")
     public ResponseEntity<Message> save(@RequestBody ZoologicoDTO zoologicoDTO){
-        return zoologicoService.save(new Zoologico(zoologicoDTO.getName(),zoologicoDTO.getCiudad(),zoologicoDTO.getPais(),zoologicoDTO.getTamano(),zoologicoDTO.getPresupuesto(),zoologicoDTO.getCiudadId()));
+        return zoologicoService.save(new Zoologico(zoologicoDTO.getName(),zoologicoDTO.getTamano(),zoologicoDTO.getPresupuesto(),zoologicoDTO.getCiudadId()));
     }
 
     @PutMapping("/")
     public ResponseEntity<Message> update(@RequestBody ZoologicoDTO zoologicoDTO){
-        return zoologicoService.update(new Zoologico(zoologicoDTO.getId(),zoologicoDTO.getName(),zoologicoDTO.getCiudad(),zoologicoDTO.getPais(),zoologicoDTO.getTamano(),zoologicoDTO.getPresupuesto(),zoologicoDTO.getCiudadId()));
+        return zoologicoService.update(new Zoologico(zoologicoDTO.getId(),zoologicoDTO.getName(),zoologicoDTO.getTamano(),zoologicoDTO.getPresupuesto(),zoologicoDTO.getCiudadId()));
     }
 
     @DeleteMapping("/{id}")

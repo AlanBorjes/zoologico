@@ -5,8 +5,7 @@ import utez.edu.mx.Zoologico.cuidad.model.Ciudad;
 public class ZoologicoDTO {
     private long id;
     private String name;
-    private String ciudad;
-    private String pais;
+
     private String tamano;
     private String presupuesto;
     private Ciudad ciudadId;
@@ -30,21 +29,6 @@ public class ZoologicoDTO {
         this.name = name;
     }
 
-    public String getCiudad() {
-        return ciudad;
-    }
-
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
 
     public String getTamano() {
         return tamano;
